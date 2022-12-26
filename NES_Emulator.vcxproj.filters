@@ -21,6 +21,9 @@
     <ClCompile Include="NES.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="6502.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="2C02.h">
