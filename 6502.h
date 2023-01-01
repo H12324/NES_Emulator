@@ -3,6 +3,8 @@
 
 // Technically its the 2A03
 
+// Note for later, hardware bug where JMP would not work correctly if of for $xxFF when reading two bytes from specified address
+
 // 6502 has 
 // - 3 Special purpose Registers PC, SP, P (status register)
 // - 3 General Purpose Reg: accumultor (A), index (X & Y)
@@ -28,7 +30,8 @@ private:
 
 	// Memory
 	// Maybe should make class or struct dedicated to this but for now...
-	u8 memory[0x10000]; // 64 KB of memory mapping
+	u8 memory[0x10000]; // 64 KB of memory mapping, 2KB of RAM $0000 to $0800 $1000 to $1800 mirrors this
+	u8 stack[256]; // Should check if stack is part of memory
 				
 };
 
